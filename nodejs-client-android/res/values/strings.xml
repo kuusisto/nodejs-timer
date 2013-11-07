@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">android-nodejs-client</string>
+    <string name="action_settings">Settings</string>
+    <string name="title">node.js client</string>
+    <string name="set_timer">set timer</string>
+
+</resources>

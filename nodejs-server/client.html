@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript">
+		
+			//TODO: move the below to an external js file...
+			
+			var socket = io.connect(window.location.hostname);
+			
+			// from server
+			socket.on('timerState', function (data) {
+			
+				// TODO: map to states "enum" in timer.js etc..
+				var buttonText;
+				var timerState;
+							
+				switch (data['timer'].state)
+				{
+					case 1:
+						 buttonText = "pause";
+						 timerState = "running";
+					break;
+					case 2:
+						buttonText = "resume";
+						timerState = "paused";
+					break;
+					case 0:
+					default:
+						buttonText = "start";
+						timerState = "stopped";
+					break;
+				}
+				
+				document.getElementById("stateButton").innerHTML = buttonText;
+				document.getElementById("timerValue").innerHTML = ("<hr/>Timer value: " + data['timer'].value + "<br>Timer state: " + timerState);
+			});	
+
+			// to server
+			function requestPause() {
+				socket.emit('togglePause');
+			}
+		
+			function sendTimerValue() {
+				var msg = document.getElementById("timer_input").value;
+				socket.emit("setValue", { message : msg});
+			}
+
+        </script>
+    </head>
+    <body>
+        <input type="text" id="timer_input"/>
+        <button onClick="sendTimerValue()">update timer</button>
+		<button id="stateButton" onClick="requestPause()">start</button>
+        <div id="timerValue"/>
+    </body>
+</html>
