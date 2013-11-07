@@ -1,7 +1,7 @@
 nodejs-timer
 =============
 
-nodejs-timer is a project utilizing nodejs to allow multiple users to start/pause a downcounting timer and set it to a specific value. This value is broadcasted to all users through websockets. 
+nodejs-timer is a client-server project utilizing nodejs to allow multiple users to start/pause a downcounting timer and set it to a specific value. This value is broadcasted in real-time to all users through websockets. 
 
 Users may also opt to use the REST API to set the timer value.
 
@@ -53,6 +53,5 @@ Server Notes:
 Client Notes:
 =============
 - When a timer is set it instantly decrements it by one second. Bummer!
-- Android WebKit approach was a wrong decision but due to time constraints something I went for.
-	- WebKit initialization is slow and current implementation does not have loading indication for async operations
-- Better approach would have been to have REST API in node.js to send e.g. JSON data and parse it. During parsing we should display a loading indication and also otherwise have better control of the application UI.
+- Loading indication is not displayed for the async operations
+- Instead of utilizing WebView a better approach would be to retrieve JSON data and parse it. Much easier, faster and will result into a better looking UI
