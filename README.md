@@ -15,6 +15,7 @@ Dependencies:
   - node.js, tested with v0.10.21
   - node.js modules socket.io and express
   - web server
+  - Eclipse etc IDE and Android SDK + phone for the client part, otherwise just web browser will do
 
 
 =============
@@ -28,6 +29,7 @@ Server Setup:
 	Modify configuration.js to select your server port. Choose a port that is not already in use. Who knows what horrible things could happen if you choose wrong.
 4. Start server
 	node server.js
+5. Point your web browser to server address of configured, by default http://localhost
     
 
 =============
