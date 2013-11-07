@@ -53,5 +53,7 @@ Server Notes:
 Client Notes:
 =============
 - When a timer is set it instantly decrements it by one second. Bummer!
-- Loading indication is not displayed for the async operations
-- Instead of utilizing WebView a better approach would be to retrieve JSON data and parse it. Much easier, faster and will result into a better looking UI
+- Android app: loading indication is not displayed for the async operations
+- Android app: only minor error handling in place, "set timer" button is disabled should an error occur. 
+- Android app: cnnectivity is not checked upon application launch, it will just attempt to load the specified URL.
+- Android app: instead of utilizing WebView a better approach would be to retrieve JSON data and parse it and display the data in native UI components. Much easier, faster and will result into a better looking...
