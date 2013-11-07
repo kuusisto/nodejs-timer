@@ -3,7 +3,7 @@ nodejs-timer
 
 nodejs-timer is a client-server project utilizing nodejs to allow multiple users to start/pause a downcounting timer and set it to a specific value. This value is broadcasted in real-time to all users through websockets. 
 
-Users may also opt to use the REST API to set the timer value.
+Users may also opt to use the REST API to set the timer value, e.g. http://yoururl/timer/500 to set it to 500 seconds.
 
 Android stub application is included
 
