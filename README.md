@@ -22,6 +22,7 @@ Dependencies:
 =============
 Server Setup:
 =============
+0. Node.js must be installed prior to further steps
 1. Extract zip to a directory of your choosing... or clone git repo etc.
 2. Install required modules whilst in that folder
 	npm install socket.io
