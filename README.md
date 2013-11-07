@@ -13,7 +13,8 @@ Android stub application is included
 Dependencies:
 =============
   - node.js, tested with v0.10.21
-  - node.js modules socket.io and express
+  - node.js module socket.io, tested with v0.9.16
+  - node.js module express, tested with v1.3.11
   - web server
   - Eclipse etc IDE and Android SDK + phone for the client part, otherwise just web browser will do
 
