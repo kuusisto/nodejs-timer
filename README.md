@@ -25,19 +25,19 @@ Server Setup:
 0. Node.js must be installed prior to further steps
 1. Extract zip to a directory of your choosing... or clone git repo etc.
 2. Install required modules whilst in that folder
-	npm install socket.io
-	npm install express
+   - npm install socket.io
+   - npm install express
 3. Configure server
-	Modify configuration.js to select your server port. Choose a port that is not already in use. Who knows what horrible things could happen if you choose wrong.
+   - Modify configuration.js to select your server port. Choose a port that is not already in use. Who knows what horrible things could happen if you choose wrong.
 4. Start server
-	node server.js
+   - node server.js
 5. Point your web browser to server address of configured, by default http://localhost
     
 
 =============
 Android Client Setup:
 =============
-1.	Modify Const.java, especially the server address and port if it's not 80
+1. Modify Const.java, especially the server address and port if it's not 80
 
 
 =============
