@@ -19,10 +19,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+// TODO: cleanup class and move as much as possible to smaller classes. Go for modularity
 public class CustomWebView extends WebView implements View.OnClickListener {
 
     private Activity mActivity;
 
+    // TODO: create widgets or containers and move these away from the WebView
     private EditText mTimerValueEditText;
     private Button mSetTimerButton;
 
@@ -51,6 +53,7 @@ public class CustomWebView extends WebView implements View.OnClickListener {
 
     private void init() {
 
+    	// TODO: look into potential XSS vulnerabilities... or is just js?
         getSettings().setJavaScriptEnabled(true);
 
         setWebChromeClient(new WebChromeClient() {
@@ -98,6 +101,7 @@ public class CustomWebView extends WebView implements View.OnClickListener {
         }
     }
 
+    // TODO: move to another class, I don't like inner classes, especially not final
     private class DownloadWebpageTask extends AsyncTask<Object, Void, Void> {
 
         @Override

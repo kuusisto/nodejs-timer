@@ -1,14 +1,3 @@
-/**
-	(C) kuusisto
-
-	server.js
-	
-	required modules:
-		- npm install socket.io
-		- npm install express
-
-*/
-
 // setup the server and required modules
 var express = require('express')
   , http = require('http');
